@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bharath Photoshop Designer | Retouching & Manipulations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -106,62 +107,67 @@
     </section>
 
     <!-- ===== Contact & Hire ===== -->
-    <section id="contact" class="section-light reveal" aria-labelledby="contact-title">
-      <div class="container contact-grid">
-        <div class="contact-info">
-          <h2 id="contact-title">Contact & Hire</h2>
-          <p class="lead">Want premium edits that convert? I handle individual edits and bulk projects — message me with a sample and I'll reply with a quote.</p>
+    <section id="contact" class="contact-section">
+  <div class="contact-container">
+    
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>Contact & Hire</h2>
+      <p class="lead">
+        Want premium edits that convert? I handle individual edits and bulk projects —
+        message me with a sample and I'll reply with a quote.
+      </p>
 
-          <ul class="contact-list" aria-label="Contact details">
-            <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-            <li><strong>WhatsApp:</strong> <a href="https://wa.me/919999999999" target="_blank" rel="noopener">+91 99999 99999</a> (replace with your number)</li>
-            <li><strong>Turnaround:</strong> 24–72 hours (depends on scope)</li>
-            <li><strong>Revisions:</strong> 2 included</li>
-          </ul>
+      <ul class="contact-list">
+        <li><i class="fas fa-envelope"></i> 
+          <a href="mailto:bharathsonuram@gmail.com">bharathsonuram@gmail.com</a>
+        </li>
+        <li><i class="fab fa-whatsapp"></i> 
+          <a href="https://wa.me/918328360705" target="_blank" rel="noopener">+91 83283 60705</a>
+        </li>
+        <li><i class="fas fa-clock"></i> Turnaround: 24–72 hours</li>
+        <li><i class="fas fa-sync-alt"></i> Revisions: 2 included</li>
+      </ul>
 
-          <p class="small">Prefer to talk first? Include a time and I’ll call back.</p>
+      <p class="small">Prefer to talk first? Include a time and I’ll call back.</p>
 
-          <div class="socials">
-            <!-- add your profile links -->
-            <a href="#" aria-label="Instagram">Instagram</a> ·
-            <a href="#" aria-label="Behance">Behance</a> ·
-            <a href="#" aria-label="Dribbble">Dribbble</a>
-          </div>
-        </div>
-
-        <div class="contact-form">
-          <form id="hireForm" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
-            <!-- Replace action with your form handling endpoint or keep mailto fallback -->
-            <label for="name">Full name</label>
-            <input id="name" name="name" type="text" required placeholder="Your name" />
-
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required placeholder="you@example.com" />
-
-            <label for="service">Service needed</label>
-            <select id="service" name="service" required>
-              <option value="">Choose a service</option>
-              <option>Retouching</option>
-              <option>Manipulation / Composite</option>
-              <option>CDP / Colour grading</option>
-              <option>Flyer / Card</option>
-              <option>Bulk / Ongoing work</option>
-            </select>
-
-            <label for="message">Project details (include link to sample images or brief)</label>
-            <textarea id="message" name="message" rows="5" placeholder="Describe the job, quantity, deadline..." required></textarea>
-
-            <!-- simple anti-spam honeypot -->
-            <label class="hidden" for="website">Website</label>
-            <input id="website" name="website" type="text" class="hidden" autocomplete="off" />
-
-            <button type="submit" class="btn-primary">Send message & Get quote</button>
-
-            <p class="privacy small">By sending you agree I may contact you about this request. Replace the form action with your preferred endpoint.</p>
-          </form>
-        </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/ram.sonu._" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.behance.net/sonuramdfailure" target="_blank" aria-label="Behance"><i class="fab fa-behance"></i></a>
+        <a href="https://x.com/RamSonu_" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
       </div>
-    </section>
+    </div>
+
+    <div class="contact-form">
+      <form id="hireForm" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required placeholder="Your name">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="Enter your email here...">
+
+        <label for="service">Service needed</label>
+        <select id="service" name="service" required>
+          <option value="">Choose a service</option>
+          <option>Retouching</option>
+          <option>Manipulation / Composite</option>
+          <option>CDP / Colour grading</option>
+          <option>Flyer / Card</option>
+          <option>Bulk / Ongoing work</option>
+        </select>
+
+        <label for="message">Project details</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Describe the job, quantity, deadline..."></textarea>
+
+        <input type="text" name="website" class="hidden" autocomplete="off">
+
+        <button type="submit" class="btn-primary">Send Message & Get Quote</button>
+        <p class="privacy small">By sending you agree I may contact you about this request.</p>
+      </form>
+    </div>
+
+  </div>
+</section>
   </main>
 
   <footer class="site-footer">
@@ -170,7 +176,7 @@
       <p class="small">Replace contact placeholders in the HTML with your real email and phone before publishing.</p>
     </div>
   </footer>
-
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script>
     // small helpers: current year + basic form fallback for mailto if you prefer
     document.getElementById('year').textContent = new Date().getFullYear();
