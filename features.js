@@ -10,17 +10,12 @@ function renderImages(category) {
 
   let itemsToShow = category === "All" ? portfolioItems : (portfolioItemsByCategory[category] || []);
 
-  const timestamp = Date.now(); // Cache buster
-
   itemsToShow.forEach(item => {
     const wrapper = document.createElement('div');
     wrapper.classList.add('image-wrapper');
 
     const img = document.createElement('img');
-    // Append timestamp query param to bust cache:
-    img.src = item.src.includes('?') 
-      ? `${item.src}&v=${timestamp}`
-      : `${item.src}?v=${timestamp}`;
+    img.src = item.src;
     img.alt = item.alt;
     img.loading = 'lazy';
 
@@ -30,7 +25,6 @@ function renderImages(category) {
     wrapper.addEventListener('click', () => openLightbox(item.src, item.alt));
   });
 }
-
 
 categoryButtons.forEach(btn => {
   btn.addEventListener('click', () => {
