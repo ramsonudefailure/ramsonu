@@ -17,7 +17,7 @@ function renderImages(category) {
     const img = document.createElement('img');
     img.src = item.src;
     img.alt = item.alt;
-    img.loading = 'lazy';
+   // img.loading = 'lazy';
 
     wrapper.appendChild(img);
     carousel.appendChild(wrapper);
@@ -70,3 +70,4 @@ lightbox.addEventListener('click', (e) => {
     lightboxImg.src = '';
   }
 });
+
