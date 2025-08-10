@@ -10,14 +10,19 @@ function renderImages(category) {
 
   let itemsToShow = category === "All" ? portfolioItems : (portfolioItemsByCategory[category] || []);
 
+  const timestamp = Date.now(); // Cache buster
+
   itemsToShow.forEach(item => {
     const wrapper = document.createElement('div');
     wrapper.classList.add('image-wrapper');
 
     const img = document.createElement('img');
-    img.src = item.src;
+    // Append timestamp query param to bust cache:
+    img.src = item.src.includes('?') 
+      ? `${item.src}&v=${timestamp}`
+      : `${item.src}?v=${timestamp}`;
     img.alt = item.alt;
-   // img.loading = 'lazy';
+    img.loading = 'lazy';
 
     wrapper.appendChild(img);
     carousel.appendChild(wrapper);
@@ -25,6 +30,7 @@ function renderImages(category) {
     wrapper.addEventListener('click', () => openLightbox(item.src, item.alt));
   });
 }
+
 
 categoryButtons.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -70,4 +76,3 @@ lightbox.addEventListener('click', (e) => {
     lightboxImg.src = '';
   }
 });
-
