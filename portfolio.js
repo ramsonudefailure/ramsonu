@@ -1,7 +1,7 @@
 export const portfolioItemsByCategory = {
   "Manipulations": [],
   "Retouching": [
-    { id: 1, src: "images/Retouchings/Master.jpg", alt: "Master" },
+    { id: 1, src: "https://i.ibb.co/nqswjTc8/Master.jpg", alt: "Master" },
     { id: 2, src: "images/Retouchings/Master-1-1-After-Retouch.jpg", alt: "Retouching 2" },
     { id: 3, src: "images/Retouchings/Life-is-very-short-full.jpg", alt: "Retouching 3" },
     { id: 4, src: "images/Retouchings/Life-is-very-short-full 3-4.jpg", alt: "Retouching 4" },
